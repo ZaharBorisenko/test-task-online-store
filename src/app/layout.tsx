@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
+import { Header } from "@/ui/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} bg-[#F1F1F8] max-w-6xl mx-auto my-5 px-5 lg:px-0`}
+      >
+        <ReactQueryProvider>
+          <Header />
+          {children}
+        </ReactQueryProvider>
+      </body>
     </html>
   );
 }
