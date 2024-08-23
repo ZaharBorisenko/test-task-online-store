@@ -1,6 +1,7 @@
 "use client";
-import { Button } from "@/ui/Button";
 import { useState } from "react";
+
+import { Button } from "@/ui/Button";
 import { useCartStore } from "@/store/store-product";
 import { calculateTotalSum } from "@/utils/helpers";
 import { CartItems } from "@/components/CartItems";

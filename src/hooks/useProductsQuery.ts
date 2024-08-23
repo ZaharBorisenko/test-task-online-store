@@ -9,7 +9,6 @@ export const useProductsQuery = () => {
   return useQuery("products", fetchProducts, {
     onSuccess: (response) => {
       const products: ProductsType[] = response.data.products.map(
-        //The task says to use only these three fields
         (p: ProductsType) => ({
           id: p.id,
           title: p.title,

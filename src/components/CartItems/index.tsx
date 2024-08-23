@@ -1,6 +1,7 @@
+import { useMemo } from "react";
+
 import { ProductCard } from "@/components/ProductCard";
 import { ProductsType } from "@/utils/types/products";
-import { useMemo } from "react";
 
 interface CartItemsProps {
   products: ProductsType[];
